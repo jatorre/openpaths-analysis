@@ -19,7 +19,7 @@ and for each segment you can determine the speed and the distance which can be v
 
 To process openpaths_segments from openpaths you can use the following SQL:
 
-    ``INSERT INTO openpaths_segments(the_geom,distance,start_timestamp,end_timestamp,speed,interv_sec,session_id) 
+    INSERT INTO openpaths_segments(the_geom,distance,start_timestamp,end_timestamp,speed,interv_sec,session_id) 
         SELECT * FROM (
         WITH segments as 
             (SELECT 
@@ -40,7 +40,7 @@ To process openpaths_segments from openpaths you can use the following SQL:
                 ST_Distance(the_geom_start::geography,the_geom_end::geography)/extract(epoch from (end_date-start_date))  
             END as speed,
             extract(epoch from (end_date-start_date)) as interv_sec
-    FROM segments) as lala``
+    FROM segments) as lala
 
 Tools being used:
 ==================
