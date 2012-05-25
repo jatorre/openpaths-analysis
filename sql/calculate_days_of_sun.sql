@@ -1,0 +1,6 @@
+-- The idea here is to look at everyday weather an calculate a set of indicators like:
+-- number of sunny days this year
+-- total sum of temperature max
+-- total sum of temperature min
+-- rainy days.
+-- etc.
